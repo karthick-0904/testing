@@ -1,0 +1,46 @@
+<div class="row">
+<div class="col-3">
+<mat-card>
+    <mat-selection-list [multiple]="false">
+        <mat-list-option (click)="filter('')"><a>All Categories</a></mat-list-option>
+        <mat-divider></mat-divider>
+        <mat-list-option  (click)="filter('Biography')"><a>Biography</a></mat-list-option>
+        <mat-divider></mat-divider>
+        <mat-list-option (click)="filter('Fantasy')" >Fantasy</mat-list-option>
+        <mat-divider></mat-divider>
+        <mat-list-option (click)="filter('Fiction')" >Fiction</mat-list-option>
+        <mat-divider></mat-divider>
+        <mat-list-option (click)="filter('Mystery')" >Mystery</mat-list-option>
+        <mat-divider></mat-divider>
+        <mat-list-option (click)="filter('Romance')" >Romance</mat-list-option>
+      </mat-selection-list>   
+</mat-card>
+
+             <app-price-filter></app-price-filter>     
+                
+                <div ng-include="price"></div>
+            
+            </div> 
+    <div class="col-9 ">
+            <div class="col-md-10">
+                <div class="row">
+                    <ng-container  *ngFor="let item of filterCategory | filter:searchkey:'title'">
+                        <div class="card col-md-3">
+                            <img src="{{item.image}}" alt="">
+                            <h5>{{item.title}}</h5>
+                            <p></p>
+                            <p><strong>price:</strong>₹{{item.price}}</p>
+                            <button class="btn btn-primary" (click)=addtocart(item)>Add to cart</button>
+                        </div>
+                    </ng-container>
+                </div>
+            </div>
+
+        </div>
+        </div>
+
+
+
+<div class="container">
+    
+</div>

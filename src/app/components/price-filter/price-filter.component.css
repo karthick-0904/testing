@@ -1,0 +1,26 @@
+mat-slider {
+  width: 230px;
+  margin: 20px 20px 20px 20px;
+}
+
+mat-card {
+  background-color: white;
+  margin-top: 15px;
+  margin-left: 20px;
+  right: 0px;
+  left: 20px;
+  
+  
+}
+.margin {
+    margin-bottom: 15px;
+    background-color: #ff4081;
+    margin-left: 20px;
+    right: 0px;
+    left: 0px;
+    
+}
+
+span {
+    font-size: 20px;
+}
